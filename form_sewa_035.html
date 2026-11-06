@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Penyewaan - Rental Mobil</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<script src="assets/java/app.js"></script>
+<body>
+  <header>
+    <h1>Rental Mobil</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="katalog_035.html">Katalog Mobil</a>
+      <a href="form_sewa_035.html">Form Penyewaan</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Form Penyewaan</h2>
+      <form id="formSewa" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required minlength="3">
+          <small id="errorNama" class="pesan-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mobil">Pilihan Mobil</label>
+          <select id="mobil" name="mobil" required>
+            <option value="">-- Pilih Mobil --</option>
+            <option value="Avanza 035">Avanza 035</option>
+            <option value="Innova 035">Innova 035</option>
+            <option value="Mazda 035">Mazda 035</option>
+            <option value="Brio 035">Brio 035</option>
+            <option value="Civic 035">Civic 035</option>
+            <option value="BMW 035">BMW 035</option>
+          </select>
+          <small id="errorMobil" class="pesan-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="lama">Lama Sewa (Hari)</label>
+          <input type="number" id="lama" name="lama" required min="1">
+          <small id="errorLama" class="pesan-error"></small>
+        </div>
+
+        <button type="submit" class="tombol">Sewa Sekarang</button>
+        <p id="hasil" class="pesan-sukses"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>&copy; Rental Mobil</footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

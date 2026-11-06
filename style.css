@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #222; line-height: 1.5; }
+header { background: #d14c9e; color: #fff; padding: 1rem; }
+header h1 { margin: 0 0 .5rem; font-size: 1.3rem; }
+nav a { color: #fff; margin-right: 1rem; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+section { margin-bottom: 1.5rem; }
+footer { text-align: center; padding: 1rem; color: #db5bb5; }
+
+
+.daftar-mobil {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.kartu {
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.kartu h3 { margin: 0 0 .25rem; }
+.harga { font-weight: bold; color: #c23884; }
+.tombol {
+  display: inline-block; margin-top: .5rem; padding: .5rem 1rem;
+  background: #ad278c; color: #fff; border: 0; border-radius: 6px;
+  text-decoration: none; font-size: 1rem; cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .daftar-mobil { grid-template-columns: repeat(3, 1fr); }
+}
+
+.form-group { margin-bottom: 1rem; }
+label { display: block; font-weight: bold; margin-bottom: .25rem; }
+input, select { width: 100%; padding: .5rem; font-size: 1rem; border: 1px solid rgb(240, 121, 180); border-radius: 6px; }
+.input-error { border-color: #b42318; }
+.pesan-error { display: block; min-height: 1.2rem; color: #b42318; font-size: .9rem; }
+.pesan-sukses { color: #067647; font-weight: bold; }
+
+.notif-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0, 0, 0, .25);
+  display: flex; justify-content: center; align-items: flex-start;
+  padding: 1rem;
+}
+.notif-kotak {
+  width: 100%; max-width: 350px; margin-top: 1rem;
+  background: #202124; color: #fff;
+  border-radius: 12px; padding: 1rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+}
+.notif-judul { margin: 0 0 1rem; font-size: 1rem; color: #e8eaed; }
+.notif-isi { margin: 0 0 1.25rem; font-size: .9rem; }
+.notif-ok {
+  display: block; margin-left: auto;
+  background: #f1f3f4; color: #202124; border: 0; border-radius: 6px;
+  padding: .4rem 1rem; font-size: .9rem; cursor: pointer;
+}
+.notif-ok:hover, .notif-ok:focus { background: #fff; outline: 2px solid #d14c9e; }
